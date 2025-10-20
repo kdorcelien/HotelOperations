@@ -3,59 +3,41 @@ package com.pluralsight;
 public class Room {
     private int numberOfBed;
     private int price;
-    private int roomNumber;
+    private boolean occupied;
+    private boolean dirty;
 
-    public Room(int numberOfBed, int price, int roomNumber) {
+    public Room(int numberOfBed, int price, boolean occupied, boolean dirty) {
         this.numberOfBed = numberOfBed;
         this.price = price;
-        this.roomNumber = roomNumber;
+        this.occupied = occupied;
+        this.dirty = dirty;
     }
 
-    public Room(int numberOfBed, int price) {
-        this.numberOfBed = numberOfBed;
-        this.price = price;
+
+    public boolean isOccupied() {
+        return occupied;
     }
-public int isOccupied(){
 
-    return  roomNumber;
-}
-    public int isDirty(){
-
-        return roomNumber;
+    public boolean isDirty() {
+        return dirty;
     }
     public boolean isAvailable(){
 
-        return numberOfBed > 1;
+        return !dirty && !occupied;
     }
 
     public int getNumberOfBed() {
         return numberOfBed;
     }
 
-    public void setNumberOfBed(int numberOfBed) {
-        this.numberOfBed = numberOfBed;
-    }
-
     public int getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public int getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
-    }
 
     @Override
     public String toString() {
         return "numberOfBed:" + numberOfBed +
-                "| price: " + price +
-                "| roomNumber: " + roomNumber;
+                "| price: " + price;
     }
 }
