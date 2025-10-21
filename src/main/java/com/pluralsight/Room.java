@@ -13,6 +13,21 @@ public class Room {
         this.dirty = dirty;
     }
 
+    public void checkIn() {
+        dirty = true;
+        occupied = true;
+    }
+
+
+    public void checkout() {
+        occupied = false;
+    }
+
+
+    public void cleanroom() {
+            dirty = false;
+    }
+
 
     public boolean isOccupied() {
         return occupied;

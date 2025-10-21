@@ -6,7 +6,7 @@ public class Reservation {
     private boolean isWeekend;
 
     public Reservation(String roomType, int numberOfNights, boolean isWeekend) {
-        this.roomType = roomType;
+        this.roomType = roomType.trim();
         this.numberOfNights = numberOfNights;
         this.isWeekend = isWeekend;
     }
@@ -45,7 +45,7 @@ public class Reservation {
         }
 
         if (isWeekend) {
-            pricePerNight = pricePerNight * 1.10;
+            pricePerNight = pricePerNight * 1.1;
         }
 
         return pricePerNight;
