@@ -34,10 +34,4 @@ public class Room {
         return price;
     }
 
-
-    @Override
-    public String toString() {
-        return "numberOfBed:" + numberOfBed +
-                "| price: " + price;
-    }
 }
