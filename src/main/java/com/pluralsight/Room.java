@@ -2,11 +2,11 @@ package com.pluralsight;
 
 public class Room {
     private int numberOfBed;
-    private int price;
+    private double price;
     private boolean occupied;
     private boolean dirty;
 
-    public Room(int numberOfBed, int price, boolean occupied, boolean dirty) {
+    public Room(int numberOfBed, double price, boolean occupied, boolean dirty) {
         this.numberOfBed = numberOfBed;
         this.price = price;
         this.occupied = occupied;
@@ -30,7 +30,7 @@ public class Room {
         return numberOfBed;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
