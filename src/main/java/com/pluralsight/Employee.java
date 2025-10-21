@@ -24,7 +24,7 @@ public class Employee {
         }
     }
 
-    // Derived getter - calculate overtime hours
+
     public double getOvertimeHours() {
         if (hoursWorked > 40) {
             return hoursWorked - 40;
@@ -53,6 +53,22 @@ public class Employee {
 
     public double getPayRate() {
         return payRate;
+    }
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public void setPayRate(double payRate) {
+        this.payRate = payRate;
     }
 
     public double getHoursWorked() {
