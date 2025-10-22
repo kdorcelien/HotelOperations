@@ -34,5 +34,27 @@ System.out.println("Is this Room available? " + room1.isAvailable());
     System.out.println("Total hours: " + emp.getHoursWorked());
     System.out.println("Overtime hours: " + emp.getOvertimeHours());
     System.out.println("Total pay: $" + emp.getTotalPay());
+    System.out.println();
+
+
+    Hotel hotel = new Hotel("Grand Plaza", 10, 20);
+    System.out.println("          Hotel test");
+    System.out.println("Available suites: " + hotel.getAvailableSuites());
+    System.out.println("Available rooms: " + hotel.getAvailableRooms());
+
+
+    boolean reservation1 = hotel.bookRoom(3, true);
+    System.out.println("Booking successful? " + reservation1 + ", Number of suite already booked: " + hotel.getBookedSuites());
+    System.out.println("Current Available suites: " + hotel.getAvailableSuites());
+
+    
+    boolean reservation2 = hotel.bookRoom(10, true);
+    System.out.println("Booking successful? " + reservation2 + ", Number of suite already booked: " + hotel.getBookedSuites());
+    System.out.println("Current Available rooms: " + hotel.getAvailableSuites());
+
+
+    boolean reservation3 = hotel.bookRoom(5, false);
+    System.out.println("Booking successful? " + reservation3 + ", Number of room already booked: " + hotel.getBookedBasicRooms());
+    System.out.println("Current Available rooms: " + hotel.getAvailableRooms());
 }
 }
