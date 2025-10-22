@@ -2,7 +2,7 @@ package com.pluralsight;
 
 public class Main {
 public static void main(String[] args){
-Room room1 = new Room(3,false,false,139.00);
+Room room1 = new Room(3,139.00);
     System.out.println("            Room 1 test");
    // room1.checkIn();
    // room1.checkOut();
@@ -11,7 +11,7 @@ System.out.println("Is this Room available? " + room1.isAvailable());
 
     System.out.println();
 
-    Room room2 = new Room(1, false, false,124.00);
+    Room room2 = new Room(1,124.00);
     System.out.println("            Room 2 test");
     room2.checkIn();
     room2.checkOut();

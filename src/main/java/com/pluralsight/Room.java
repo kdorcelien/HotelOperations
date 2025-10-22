@@ -6,7 +6,7 @@ public class Room {
     private boolean dirty;
     private double price;
 
-    public Room(int numberOfBed, boolean occupied, boolean dirty, double price) {
+    public Room(int numberOfBed, double price) {
         this.numberOfBed = numberOfBed;
         this.occupied = occupied;
         this.dirty = dirty;
@@ -20,12 +20,14 @@ public class Room {
 
 
     public void checkOut() {
+        dirty = true;
         occupied = false;
     }
 
 
     public void cleanRoom() {
-            dirty = false;
+        dirty = false;
+        occupied = false;
     }
 
 

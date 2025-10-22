@@ -20,6 +20,27 @@ public class Employee {
 
 
     }
+    public void punchIn(double time) {
+        this.startTime = time;
+    }
+
+    public void punchIn() {
+        LocalDateTime now = LocalDateTime.now();
+        this.startTime = now.getHour() + (now.getMinute() / 60);
+    }
+
+    public void punchOut(double time) {
+        this.hoursWorked += (time - this.startTime);
+        this.startTime = -1;
+    }
+
+    public void punchOut() {
+        LocalDateTime now = LocalDateTime.now();
+        double time = now.getHour() + (now.getMinute() / 60);
+        this.hoursWorked += (time - this.startTime);
+        this.startTime = -1;
+    }
+
     public void punchTimeCard(double time) {
         if (startTime == 0) {
             startTime = time;
@@ -34,7 +55,7 @@ public class Employee {
         if (startTime == 0) {
             LocalDateTime now = LocalDateTime.now();
             double currentTime = now.getHour() + (now.getMinute() / 60.0);
-            startTime += currentTime;
+            startTime = currentTime;
         } else {
             LocalDateTime now = LocalDateTime.now();
             double currentTime = now.getHour() + (now.getMinute() / 60.0);
